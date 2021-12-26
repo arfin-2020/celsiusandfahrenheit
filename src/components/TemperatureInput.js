@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
-const TemperatureInput =  () =>{
-    const [temperature, setTemperature] =  useState('');
+const TemperatureInput =  ({temperature, onTemperatureChange, scale}) =>{
+    // console.log('-----', temperature, onTemperatureChange,scale);
 
-    const onTemperatureChange = (e) =>{
-        setTemperature(e.target.value)
+    const scaleName={
+        c: 'Celsius',
+        f: 'fahrenheit'
     }
     const BoilingVerdict = ({calsius}) =>{
-        if(calsius == 100){
+        if(calsius >= 100){
             return <p>It would be boil water.</p>
         }
-       else if(calsius >=200){
-            return <p>It cross 200 degree calsius</p>
-        }
+    //    else if(calsius >=200){
+    //         return <p>It cross 200 degree calsius</p>
+    //     }
         else{
             return <p>It not a boil water</p>
         }
@@ -21,8 +22,10 @@ const TemperatureInput =  () =>{
     return(
         <div>
         <fieldset>
-        <legend>Enter temperature in Celsius</legend>
-            <input type='text' onChange={onTemperatureChange}/>
+        <legend>Enter temperature in {scaleName[scale]}</legend>
+            <input type='text' 
+            value={temperature}
+            onChange={(e)=>onTemperatureChange(e,scale)}/>
         </fieldset>
         <BoilingVerdict calsius={temperature}/>
         </div>
