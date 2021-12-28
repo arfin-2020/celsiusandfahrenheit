@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { convert, toCelcius, toFehrenheit } from './lib/converter';
+import { convert, toAddition, toCelcius, toFehrenheit } from './lib/converter';
 import TemperatureInput from './TemperatureInput';
 
 const Calculator =  () =>{
@@ -16,7 +16,7 @@ const Calculator =  () =>{
     }
     const calcius =  scale === 'f' ? convert(temperature, toCelcius) : temperature;
     const fahrenheit = scale === 'c' ? convert(temperature, toFehrenheit) : temperature;
-    
+    const addition = scale === 'a' ? convert(temperature, toAddition) : temperature;
     console.log('celcius---', calcius);
     console.log('fahrenheit---', fahrenheit);
     return(
@@ -31,6 +31,11 @@ const Calculator =  () =>{
             temperature={fahrenheit} 
             onTemperatureChange={onTemperatureChange} 
             scale='f'/>
+
+            <TemperatureInput 
+            temperature={addition} 
+            onTemperatureChange={onTemperatureChange} 
+            scale='a'/>
             
         </div>
     )

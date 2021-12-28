@@ -28,6 +28,7 @@ const TemperatureInput =  ({temperature, onTemperatureChange, scale}) =>{
             onChange={(e)=>onTemperatureChange(e,scale)}/>
         </fieldset>
         <BoilingVerdict calsius={temperature}/>
+        {<p>{temperature}</p>}
         </div>
 )
 }

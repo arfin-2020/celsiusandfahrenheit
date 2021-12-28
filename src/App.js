@@ -1,10 +1,16 @@
 import './App.css';
-import Calculator from './components/Calculator';
+import ClickCounter from './components/components2/ClickCounter';
+import HoverCounter from './components/components2/HoverCounter';
 
 function App() {
   return (
     <div className="App">
-      <Calculator/>
+      {/* <Calculator/> */}
+      {/* <ClickCounter buttonCount={buttonCount} Buttonincrease={Buttonincrease} />
+      <HoverCounter count={count} increase={increase} /> */}
+      <ClickCounter />
+      <HoverCounter  />
+      {/* <MainFunction/> */}
     </div>
   );
 }

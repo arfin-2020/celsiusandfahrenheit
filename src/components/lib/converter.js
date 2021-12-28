@@ -5,7 +5,9 @@ export const toCelcius = (fahrenheit) =>{
 export const toFehrenheit = (celcius) =>{
     return (celcius * 9) / 5 +32;
 }
-
+export const toAddition = (addition) =>{
+    return addition *20;
+}
 export const convert = (temperature, convertTo) =>{
     const input =  parseFloat(temperature);
     if(Number.isNaN(input)){
