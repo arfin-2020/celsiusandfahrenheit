@@ -13,11 +13,10 @@
 
 import withCounter from './HOC/withCounter';
 
-const  HoverCounter  = ({incrementCount, count}) => {
-      
+const  HoverCounter  = ({incrementDoubleCount, count}) => {
         return (
             <div>
-                <h1 onMouseOver={incrementCount}>Clicked {count} Hover</h1>
+                <h1 onMouseOver={incrementDoubleCount}>Clicked {count} Hover</h1>
             </div>
         )
 }
