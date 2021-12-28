@@ -11,15 +11,15 @@
 
 // export default ClickCounter;
 
-import React from 'react';
+
 import withCounter from './HOC/withCounter';
 
-const  ClickCounter  = ({incrementCount, count}) =>{
+const  ClickCounter  = ({incrementDoubleCount, count}) =>{
     // console.log(count,increase)
         return (
             <div>
                 <button type ='button' 
-                onClick={incrementCount}>Clicked {count} times</button>
+                onClick={incrementDoubleCount}>Clicked {count} times</button>
             </div>
         )
 }

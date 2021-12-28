@@ -10,7 +10,7 @@
 // }
 
 // export default HoverCounter;
-import React from 'react';
+
 import withCounter from './HOC/withCounter';
 
 const  HoverCounter  = ({incrementCount, count}) => {
