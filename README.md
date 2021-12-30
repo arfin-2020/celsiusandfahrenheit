@@ -5,3 +5,5 @@
 ### Component2 => Higher order component (lecture-13)
 
 ### Component3 => React Render Props (lecture-14)
+
+### Component4 => React Render Props (lecture-15)

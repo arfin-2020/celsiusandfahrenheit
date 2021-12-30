@@ -1,11 +1,9 @@
 import './App.css';
-import ClickCounter from './components/components3/ClickCounter';
-import Counter from './components/components3/Counter';
-// import ClickCounter from './components/components2/ClickCounter';
-import HoverCounter from './components/components3/HoverCounter';
+import Section from './components/components4/practiseComponents/Section';
 // import Counter from './components/components3/Counter';
 
 function App() {
+  const theme = 'darkd'
   return (
     <div className="App">
       {/* <Calculator/> */}
@@ -17,9 +15,13 @@ function App() {
       {/* <ClickCounter /> */}
       {/* <HoverCounter  /> */}
       {/* <User render={(isLoggedIn)=>isLoggedIn ? 'Arfin' : 'Guest'}/> */}
-      <Counter render={(count, incrementCount)=>(<ClickCounter count={count} incrementCount={incrementCount}/>)}/>
+      {/* <Counter render={(count, incrementCount)=>(<ClickCounter count={count} incrementCount={incrementCount}/>)}/>
       
-      <Counter render={(count, incrementCount)=>(<HoverCounter count={count} incrementCount={incrementCount}/>)}/>
+      <Counter render={(count, incrementCount)=>(<HoverCounter count={count} incrementCount={incrementCount}/>)}/> */}
+      {/* <ClickCounter/> */}
+
+     <Section theme={theme}/>
+
     </div>
   );
 }
