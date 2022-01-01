@@ -1,9 +1,8 @@
 import './App.css';
+import ThemeContext from './components/components4/Contexts/ThemeContext';
 import Section from './components/components4/practiseComponents/Section';
-// import Counter from './components/components3/Counter';
-
 function App() {
-  const theme = 'darkd'
+  const theme = 'light'
   return (
     <div className="App">
       {/* <Calculator/> */}
@@ -20,7 +19,7 @@ function App() {
       <Counter render={(count, incrementCount)=>(<HoverCounter count={count} incrementCount={incrementCount}/>)}/> */}
       {/* <ClickCounter/> */}
 
-     <Section theme={theme}/>
+     <ThemeContext.Provider value={{theme: theme}}><Section /></ThemeContext.Provider>
 
     </div>
   );
