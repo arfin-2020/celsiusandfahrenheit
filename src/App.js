@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Counter from './components/components5/Counter';
 import Todo from './components/components5/Todo';
 
 function App() {
@@ -33,8 +34,8 @@ function App() {
 
      {/* <ThemeContext.Provider value={{theme: theme, switchTheme: switchTheme}}><Section /></ThemeContext.Provider> */}
 
-    <Todo/>
-
+    {/* <Todo/> */}
+      <Counter/>
     </div>
   );
 }
