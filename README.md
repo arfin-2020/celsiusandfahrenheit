@@ -9,3 +9,5 @@
 ### Component4 => React Render Props (lecture-15,16)
 
 ### Component5 => useState Hooks (lecture-19)
+
+### Component6 => useEffect Hooks (lecture-20)

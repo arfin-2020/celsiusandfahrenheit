@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import Counter from './components/components5/Counter';
-import Todo from './components/components5/Todo';
+import MyFunctionalComponent from './components/Component6/MyFunctionalComponent';
 
 function App() {
   const [theme, setTheme] = useState('dark')
@@ -35,7 +34,9 @@ function App() {
      {/* <ThemeContext.Provider value={{theme: theme, switchTheme: switchTheme}}><Section /></ThemeContext.Provider> */}
 
     {/* <Todo/> */}
-      <Counter/>
+      {/* <Counter/> */}
+      {/* <MyComponentClass/> */}
+      <MyFunctionalComponent/>
     </div>
   );
 }
