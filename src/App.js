@@ -1,8 +1,20 @@
+import { useState } from 'react';
 import './App.css';
-import ThemeContext from './components/components4/Contexts/ThemeContext';
-import Section from './components/components4/practiseComponents/Section';
+import Todo from './components/components5/Todo';
+
 function App() {
-  const theme = 'light'
+  const [theme, setTheme] = useState('dark')
+  
+
+  const switchTheme = () =>{
+    if(theme === 'dark'){
+           setTheme('light')
+        }
+        else{
+           setTheme('dark')
+        }
+  }
+  
   return (
     <div className="App">
       {/* <Calculator/> */}
@@ -19,7 +31,9 @@ function App() {
       <Counter render={(count, incrementCount)=>(<HoverCounter count={count} incrementCount={incrementCount}/>)}/> */}
       {/* <ClickCounter/> */}
 
-     <ThemeContext.Provider value={{theme: theme}}><Section /></ThemeContext.Provider>
+     {/* <ThemeContext.Provider value={{theme: theme, switchTheme: switchTheme}}><Section /></ThemeContext.Provider> */}
+
+    <Todo/>
 
     </div>
   );
