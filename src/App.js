@@ -1,20 +1,19 @@
-import { useState } from 'react';
-import './App.css';
-import MyFunctionalComponent from './components/Component6/MyFunctionalComponent';
+import { useState } from "react";
+import "./App.css";
+import MyFunctionalComponent from "./components/Component6/MyFunctionalComponent";
 
 function App() {
-  const [theme, setTheme] = useState('dark')
-  
+  const [theme, setTheme] = useState("dark");
+  const [show, setShow] = useState(true);
 
-  const switchTheme = () =>{
-    if(theme === 'dark'){
-           setTheme('light')
-        }
-        else{
-           setTheme('dark')
-        }
-  }
-  
+  const switchTheme = () => {
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  };
+
   return (
     <div className="App">
       {/* <Calculator/> */}
@@ -31,12 +30,17 @@ function App() {
       <Counter render={(count, incrementCount)=>(<HoverCounter count={count} incrementCount={incrementCount}/>)}/> */}
       {/* <ClickCounter/> */}
 
-     {/* <ThemeContext.Provider value={{theme: theme, switchTheme: switchTheme}}><Section /></ThemeContext.Provider> */}
+      {/* <ThemeContext.Provider value={{theme: theme, switchTheme: switchTheme}}><Section /></ThemeContext.Provider> */}
 
-    {/* <Todo/> */}
+      {/* <Todo/> */}
       {/* <Counter/> */}
       {/* <MyComponentClass/> */}
-      <MyFunctionalComponent/>
+      {show && <MyFunctionalComponent />}
+      <p>
+        <button onClick={()=>{setShow((prevShow)=>!prevShow)}}>
+        {show ? "Hide Post" : "Show Post"}
+        </button>
+      </p>
     </div>
   );
 }

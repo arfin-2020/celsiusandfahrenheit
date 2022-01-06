@@ -10,13 +10,18 @@ const MyFunctionalComponent = () => {
     }, [count])
 
     useEffect(()=>{
-        console.log('render2')
-        setInterval(tick, 1000);
+        console.log('starting timer')
+       const interval= setInterval(tick, 1000);
+        return ()=>{
+            console.log('Component will unmount')
+            clearInterval(interval)
+        }
     },[])
     const addClick = () => {
         setCount((prevState) => prevState + 1);
     }
     const tick = () => {
+        console.log('ticking')
         setDate(new Date())
     }
     return (
