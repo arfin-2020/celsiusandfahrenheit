@@ -11,3 +11,7 @@
 ### Component5 => useState Hooks (lecture-19)
 
 ### Component6 => useEffect Hooks (lecture-20)
+
+### Component7 => useCallback & useMemo Hooks (lecture-21)
+
+### Component8 => useRaf() & forwardRef() (lecture-21)

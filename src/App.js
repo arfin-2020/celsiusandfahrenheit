@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import MyFunctionalComponent from "./components/Component6/MyFunctionalComponent";
-
+import App1 from "./components/component7/App";
 function App() {
   const [theme, setTheme] = useState("dark");
   const [show, setShow] = useState(true);
@@ -35,12 +34,13 @@ function App() {
       {/* <Todo/> */}
       {/* <Counter/> */}
       {/* <MyComponentClass/> */}
-      {show && <MyFunctionalComponent />}
+      {/* {show && <MyFunctionalComponent />}
       <p>
         <button onClick={()=>{setShow((prevShow)=>!prevShow)}}>
         {show ? "Hide Post" : "Show Post"}
         </button>
-      </p>
+      </p> */}
+      <App1/>
     </div>
   );
 }
