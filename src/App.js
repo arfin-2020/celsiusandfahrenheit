@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import App1 from "./components/component7/App";
+import Form from './components/component8/Form'
 function App() {
   const [theme, setTheme] = useState("dark");
   const [show, setShow] = useState(true);
@@ -40,7 +41,8 @@ function App() {
         {show ? "Hide Post" : "Show Post"}
         </button>
       </p> */}
-      <App1/>
+      {/* <App1/> */}
+      <Form/>
     </div>
   );
 }
