@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import ComplexCounter from "./components/Component9/ComplexCounter";
 import CounterThree from "./components/Component9/CounterThree";
+import GetPost from "./components/Component9/GetPost";
 function App() {
   const [theme, setTheme] = useState("dark");
   const [show, setShow] = useState(true);
@@ -45,7 +46,8 @@ function App() {
       {/* <Form/> */}
       {/* <Counter/> */}
       {/* <ComplexCounter/> */}
-      <CounterThree/>
+      {/* <CounterThree/> */}
+      <GetPost/>
     </div>
   );
 }
