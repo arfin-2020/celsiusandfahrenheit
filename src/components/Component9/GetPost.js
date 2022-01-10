@@ -13,20 +13,18 @@ const GetPost = () => {
                 setPost(data);
                 setError('')
             })
-            .catch(error=>{
+            .catch(()=>{
                 setLoading(false);
                 setPost({});
-                setError(error)
+                setError('Your fetching url is not valid')
             })
     }, [])
-    // console.log(post)
-    // const Loading = () =>{
-    //     return "loading....."
-    // }
+    
     return (
         <div>
           {loading ? 'loading.......' : post.title}
           {error ? error : null}
+        
         </div>
     )
 }
