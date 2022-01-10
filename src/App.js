@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import ComplexCounter from "./components/Component9/ComplexCounter";
+import CounterThree from "./components/Component9/CounterThree";
 function App() {
   const [theme, setTheme] = useState("dark");
   const [show, setShow] = useState(true);
@@ -43,7 +44,8 @@ function App() {
       {/* <App1/> */}
       {/* <Form/> */}
       {/* <Counter/> */}
-      <ComplexCounter/>
+      {/* <ComplexCounter/> */}
+      <CounterThree/>
     </div>
   );
 }
