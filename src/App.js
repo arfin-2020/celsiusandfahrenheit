@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import GetPost2 from "./components/Component9/GetPost2";
+import { LayoutComponentOne } from "./components/component10/LayoutComponent";
+
 function App() {
   const [theme, setTheme] = useState("dark");
   const [show, setShow] = useState(true);
@@ -46,7 +47,9 @@ function App() {
       {/* <ComplexCounter/> */}
       {/* <CounterThree/> */}
       {/* <GetPost/> */}
-      <GetPost2/>
+      {/* <GetPost2/> */}
+      <LayoutComponentOne/>
+      {/* <LayoutComponentTwo/> */}
     </div>
   );
 }
