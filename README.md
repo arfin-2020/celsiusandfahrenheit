@@ -19,3 +19,5 @@
 ### Component9 => useReducer (lecture-23)
 
 ### Component10 => Custome Hooks (lecture-24)
+
+### Component11 => Styling React Component (lecture-25)

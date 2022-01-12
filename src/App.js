@@ -1,18 +1,16 @@
-import { useState } from "react";
 import "./App.css";
-import { LayoutComponentOne } from "./components/component10/LayoutComponent";
-
+import App2 from './components/Component11/App2';
 function App() {
-  const [theme, setTheme] = useState("dark");
-  const [show, setShow] = useState(true);
+  // const [theme, setTheme] = useState("dark");
+  // const [show, setShow] = useState(true);
 
-  const switchTheme = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
-  };
+  // const switchTheme = () => {
+  //   if (theme === "dark") {
+  //     setTheme("light");
+  //   } else {
+  //     setTheme("dark");
+  //   }
+  // };
 
   return (
     <div className="App">
@@ -48,8 +46,9 @@ function App() {
       {/* <CounterThree/> */}
       {/* <GetPost/> */}
       {/* <GetPost2/> */}
-      <LayoutComponentOne/>
+      {/* <LayoutComponentOne/> */}
       {/* <LayoutComponentTwo/> */}
+      <App2/>
     </div>
   );
 }
