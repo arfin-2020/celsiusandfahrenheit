@@ -1,5 +1,5 @@
 import "./App.css";
-import App2 from './components/Component11/App2';
+import Component12 from "./components/Component12/Component12";
 function App() {
   // const [theme, setTheme] = useState("dark");
   // const [show, setShow] = useState(true);
@@ -48,7 +48,8 @@ function App() {
       {/* <GetPost2/> */}
       {/* <LayoutComponentOne/> */}
       {/* <LayoutComponentTwo/> */}
-      <App2/>
+      {/* <App2/> */}
+      <Component12/>
     </div>
   );
 }

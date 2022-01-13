@@ -21,3 +21,5 @@
 ### Component10 => Custome Hooks (lecture-24)
 
 ### Component11 => Styling React Component (lecture-25)
+
+### Component12 => Styled Component in React(lecture-26)
