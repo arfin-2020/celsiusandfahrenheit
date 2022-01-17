@@ -1,27 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './assets/css/dark.css';
 import Tutorial from './Tutorial';
 
+
+
+export const ThemeContext = React.createContext();
 const Component12 = () =>{
-    // const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState('dark');
 
-    // const switchTheme = () =>{
-    //     if(theme === 'dark'){
-    //         setTheme('dark')
-    //     }
-    //     else{
-    //         setTheme('light')
-    //     }
+    const switchTheme = () =>{
+        if(theme === 'dark'){
+            setTheme('light')
+        }
+        else{
+            setTheme('dark')
+        }
 
-    // }
+    }
     
-   export const UserContext = React.createContext('light');
+   
 
     return(
         <div>
-            <UserContext.Provider  value={'light'}>
+            <ThemeContext.Provider  value={{theme,switchTheme}}>
             <Tutorial/>
-            </UserContext.Provider>
+            </ThemeContext.Provider>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import nerdImage from './assets/illustration.png';
 import Button from './Button';
+import { ThemeContext } from './Component12';
 // import Content from './Content';
 import Image from './Image';
 import { ButtonContainer, CardContainer, Content } from './styles/Container.style';
@@ -9,27 +10,20 @@ import { H1, P, Tag } from './styles/Elements';
 
 
 
-// const array = [23,545,45,55,45];
-// const myFuntion = (initialValue,value,index,array) =>{
-//     // console.log(value)
-//     // console.log(index)
-//     // console.log(array)
-//     // console.log('---------------------------------------------')
-
-//     return  initialValue + value;
-// }
-
-// const result = array.reduce(myFuntion);
-// console.log('result-----', result);
 
 
 
 const Card = () => {
     const Theme = useContext(ThemeContext);
+        const {theme, switchTheme} = Theme;
+        console.log(theme)
 
-        console.log(Theme)
+        const style =
+    theme === "dark"
+      ? { backgroundColor: "#000000", color: "#ffffff" }
+      : { backgroundColor: "#00808080", color: "#000000" };
     return (
-        <CardContainer>
+        <CardContainer style={style}>
             <Content>
                 <Tag color="#4361ee">EXCLUSIVE</Tag>
                 <H1>React Styled Components</H1>
@@ -39,7 +33,8 @@ const Card = () => {
                 <ButtonContainer>
                     <Button link="https://lwsbd.link/rsc" text="Watch now" />
                     <Button link="https://lwsbd.link/react" text="Github repo" />
-                    <Button onClick={()=>{}} text='Change Theme'/>
+                    <button onClick={switchTheme}>{theme === 'dark' ? 'Dark Button' : 'Light Button'}</button>
+                    
                 </ButtonContainer>
 
             </Content>
